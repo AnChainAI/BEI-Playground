@@ -37,18 +37,35 @@ Every request needs an API key. Please visit [this page](https://www.anchain.ai/
 
 ## APIs
 
+Note: the API key for BEI demo server is ```demo_api_key```.
+
 #### address_info
 
+###### cURL
+
 ```bash
-curl -XGET 'https://bei.anchainai.com/api/address_info?proto=your_proto&address=your_address&apikey=your_apikey'
+curl -XGET 'https://bei-demo.anchainai.com/api/address_info?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
+```
+
+###### Python
+
+```python
+import requests
+
+url = 'https://bei-demo.anchainai.com/api/address_info'
+payload = {
+  'proto': '<PROTO>',
+  'address': '<ADDR>',
+  'apikey': '<APIKEY>'
+}
+res = requests.get(url=url, params=payload)
 ```
 
 ##### parameters
 
 - proto(required): blockchain protocol, current available options: btc, eth
 - address(required): blockchain address
-- apikey(required): your BEI API key
-- txn_time(optional): select a UNIX timestamp for risk calculation based on recent hack events
+- apikey(required): [get your free BEI API key today!](https://bei.anchainai.com/pricing)
 
 ##### sample response
 
@@ -75,16 +92,31 @@ curl -XGET 'https://bei.anchainai.com/api/address_info?proto=your_proto&address=
 
 #### address_risk_score
 
+###### cURL
+
 ```bash
-curl -XGET 'https://bei.anchainai.com/api/address_risk_score?proto=your_proto&address=your_address&apikey=your_apikey'
+curl -XGET 'https://bei-demo.anchainai.com/api/address_risk_score?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
+```
+
+###### Python
+
+```python
+import requests
+
+url = 'https://bei-demo.anchainai.com/api/address_risk_score'
+payload = {
+  'proto': '<PROTO>',
+  'address': '<ADDR>',
+  'apikey': '<APIKEY>'
+}
+res = requests.get(url=url, params=payload)
 ```
 
 ##### parameters
 
 - proto(required): blockchain protocol, current available options: btc, eth
 - address(required): blockchain address
-- apikey(required): your BEI API key
-- txn_time(optional): select a UNIX timestamp for risk calculation based on recent hack events
+- apikey(required): [get your free BEI API key today!](https://bei.anchainai.com/pricing)
 
 ##### sample response
 
@@ -116,16 +148,31 @@ curl -XGET 'https://bei.anchainai.com/api/address_risk_score?proto=your_proto&ad
 
 #### address_risk_info
 
+###### cURL
+
 ```bash
-curl -XGET 'https://bei.anchainai.com/api/address_risk_info?proto=your_proto&address=your_address&apikey=your_apikey'
+curl -XGET 'https://bei-demo.anchainai.com/api/address_risk_info?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
+```
+
+###### Python
+
+```python
+import requests
+
+url = 'https://bei-demo.anchainai.com/api/address_risk_info'
+payload = {
+  'proto': '<PROTO>',
+  'address': '<ADDR>',
+  'apikey': '<APIKEY>'
+}
+res = requests.get(url=url, params=payload)
 ```
 
 ##### parameters
 
 - proto(required): blockchain protocol, current available options: btc, eth
 - address(required): blockchain address
-- apikey(required): your BEI API key
-- txn_time(optional): select a UNIX timestamp for risk calculation based on recent hack events
+- apikey(required): [get your free BEI API key today!](https://bei.anchainai.com/pricing)
 
 ##### sample response
 
@@ -156,4 +203,5 @@ curl -XGET 'https://bei.anchainai.com/api/address_risk_info?proto=your_proto&add
     "status": 200
 }
 ```
+
 
