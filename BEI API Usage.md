@@ -44,7 +44,7 @@ Note: the API key for BEI demo server is ```demo_api_key```.
 ###### cURL
 
 ```bash
-curl -XGET 'https://bei-demo.anchainai.com/api/address_info?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
+curl -XGET 'https://bei-demo.anchainai.com/api/address_label?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
 ```
 
 ###### Python
@@ -52,7 +52,7 @@ curl -XGET 'https://bei-demo.anchainai.com/api/address_info?proto=<PROTO>&addres
 ```python
 import requests
 
-url = 'https://bei-demo.anchainai.com/api/address_info'
+url = 'https://bei-demo.anchainai.com/api/address_label'
 payload = {
   'proto': '<PROTO>',
   'address': '<ADDR>',
@@ -151,7 +151,7 @@ res = requests.get(url=url, params=payload)
 ###### cURL
 
 ```bash
-curl -XGET 'https://bei-demo.anchainai.com/api/address_risk_info?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
+curl -XGET 'https://bei-demo.anchainai.com/api/address_risk_activity?proto=<PROTO>&address=<ADDR>&apikey=<APIKEY>'
 ```
 
 ###### Python
@@ -159,7 +159,7 @@ curl -XGET 'https://bei-demo.anchainai.com/api/address_risk_info?proto=<PROTO>&a
 ```python
 import requests
 
-url = 'https://bei-demo.anchainai.com/api/address_risk_info'
+url = 'https://bei-demo.anchainai.com/api/address_risk_activity'
 payload = {
   'proto': '<PROTO>',
   'address': '<ADDR>',
