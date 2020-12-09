@@ -117,7 +117,7 @@ This table contains 6 BTC and 5 ETH addresses available on demo domain.
 
 ## APIs
 
-#### address_info
+#### address_label
 
 ###### cURL
 
@@ -224,7 +224,7 @@ res = requests.get(url=url, params=payload)
 }
 ```
 
-#### address_risk_info
+#### address_risk_activity
 
 ###### cURL
 
