@@ -4,6 +4,8 @@ Link to the API documentation: https://bei.anchainai.com/api/doc
 
 Every request needs an API key. Please visit [this page](https://www.anchain.ai/bei) if you need one.
 
+Get started with our [demo domain](https://demo.anchainai.com/) to experience our BEI API.
+
 ## Response Body
 
 #### status
