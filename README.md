@@ -13,28 +13,12 @@ Get started with our [demo domain](https://demo.anchainai.com/) to experience ou
 ```python
 import requests
 
-def get_risk_score(address): # get address risk score and detail from BEI API demo domain
-  url = 'https://demo.anchainai.com/api/address_risk_score'
-  payload = {
-    'proto': 'btc',
-    'address': address,
-    'apikey': 'demo_api_key'
-  }
-  res = requests.get(url=url, params=payload)
-  info = res.json()
-  detail = info['data'][address]['self']['detail']
-  risk_score = info['data'][address]['risk']['score']
-  return (detail, risk_score)
+def check_receiver_risk_score(proto, receiver_addr): # get address risk score from BEI API demo domain
+  res = requests.get(f'https://demo.anchainai.com/api/address_risk_score?proto={proto}&apikey=demo_api_key&address={receiver_addr}')
+  risk_score = res.json()['data'][receiver_addr]['risk']['score'] if res.status_code == 200 else -1
+  return True if 0 <= risk_score <= 50 else False # if the input address is valid and safe
 
-receiver_addr = '12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw' #Ransomware WannaCry
-(detail, risk_score) = get_risk_score(receiver_addr)
-
-if risk_score > 50: 
-  print(f'Do not transact, the receiver is a high-risk address with risk score: {risk_score}')
-  print(f'You are trying to transact with {detail}')
-  # Block the transaction
-else: 
-  print('Receiver is not high-risk')
+is_safe = check_receiver_risk_score('btc', '12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw') # boolean indicating if address is safe
 ```
 
 #### Alert the receiver if the sender is high-risk
@@ -42,28 +26,12 @@ else:
 ```python
 import requests
 
-def get_risk_score(address): # get address risk score and detail from BEI API demo domain
-  url = 'https://demo.anchainai.com/api/address_risk_score'
-  payload = {
-    'proto': 'btc',
-    'address': address,
-    'apikey': 'demo_api_key'
-  }
-  res = requests.get(url=url, params=payload)
-  info = res.json()
-  detail = info['data'][address]['self']['detail']
-  risk_score = info['data'][address]['risk']['score']
-  return (detail, risk_score)
+def check_sender_risk_score(proto, sender_addr): # get address risk score from BEI API demo domain
+  res = requests.get(f'https://demo.anchainai.com/api/address_risk_score?proto={proto}&apikey=demo_api_key&address={sender_addr}')
+  risk_score = res.json()['data'][sender_addr]['risk']['score'] if res.status_code == 200 else -1
+  return True if 0 <= risk_score <= 50 else False # if the input address is valid and safe
 
-sender_addr = '12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw' #Ransomware WannaCry
-(detail, risk_score) = get_risk_score(sender_addr)
-
-if risk_score > 50: 
-  print(f'Alert, you received a transaction from a high-risk address with risk score: {risk_score}')
-  print(f'You are trying to transact with {detail}')
-  # Send alert
-else: 
-  print('Sender is not high-risk')
+is_safe = check_sender_risk_score('btc', '12t9YDPgwueZ9NyMgw519p7AA8isjr6SMw') # boolean indicating if address is safe
 ```
 
 ## Demo Addresses
