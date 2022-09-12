@@ -81,8 +81,15 @@ else:
 | ETH      | 0xf4a2eff88a408ff4c4550148151c33c93442619e |
 | ETH      | 0xab5c66752a9e8167967685f1450532fb96d5d24f |
 | ETH      | 0x05f51aab068caa6ab7eeb672f88c180f67f17ec7 |
+| XRPL     | rfapBqj7rUkGju7oHTwBwhEyXgwkEM4yby         |
+| XRPL     | rUzWJkXyEtT8ekSSxkBYPqCvHpngcy6Fks         |
+| XRPL     | rwggnsfxvCmDb3YP9Hs1TaGvrPR7ngrn7Z         |
+| XRPL     | rJb5KsHsDHF1YS5B5DU6QCkH5NsPaKQTcy         |
+| XRPL     | r97KeayHuEsDwyU1yPBVtMLLoQr79QcRFe         |
+| XRPL     | rhxRteLqGZrzTyZyPkAVnqrWFXT7r2cgnY         |
+| XRPL     | rDHRqKE6kBqrTr4Ks3ACv7fHHVRf71RY6U         |
+| XRPL     | rnXyVQzgxZe7TR1EPzTkGj2jxH4LMJYh66         |
 
-This table contains 6 BTC and 5 ETH addresses available on demo domain.
 
 ## Response Body
 
