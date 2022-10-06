@@ -2,7 +2,7 @@
 
 Link to the API documentation: https://bei.anchainai.com/docs
 
-Every request needs an API key. Please visit [this page](https://www.anchain.ai/bei) if you need one.
+Every request needs an API key. Please visit [this page](https://id.anchainai.com/auth/realms/bei-dashboard/protocol/openid-connect/registrations?kc_locale=&client_id=bei-dashboard&response_type=code&scope=openid%20email&redirect_uri=https%3A%2F%2Fbei.anchainai.com%2Fcallback%3Fref%3Dhttps%253A%252F%252Fbei.anchainai.com%252Fdocs) if you need one.
 
 Get started with our [demo domain](https://demo.anchainai.com/) to experience our BEI API with API key: ```demo_api_key```.
 
@@ -150,7 +150,7 @@ res = requests.get(url=url, params=payload)
 
 - proto(required): blockchain protocol, current available options: btc, eth
 - address(required): blockchain address
-- apikey(required): [get your free BEI API key today!](https://bei.anchainai.com/pricing)
+- apikey(required): [get your API key today!](https://id.anchainai.com/auth/realms/bei-dashboard/protocol/openid-connect/registrations?kc_locale=&client_id=bei-dashboard&response_type=code&scope=openid%20email&redirect_uri=https%3A%2F%2Fbei.anchainai.com%2Fcallback%3Fref%3Dhttps%253A%252F%252Fbei.anchainai.com%252Fdocs)
 
 ##### sample response
 
@@ -201,7 +201,7 @@ res = requests.get(url=url, params=payload)
 
 - proto(required): blockchain protocol, current available options: btc, eth
 - address(required): blockchain address
-- apikey(required): [get your free BEI API key today!](https://bei.anchainai.com/pricing)
+- apikey(required): [get your BEI API key today!](https://id.anchainai.com/auth/realms/bei-dashboard/protocol/openid-connect/registrations?kc_locale=&client_id=bei-dashboard&response_type=code&scope=openid%20email&redirect_uri=https%3A%2F%2Fbei.anchainai.com%2Fcallback%3Fref%3Dhttps%253A%252F%252Fbei.anchainai.com%252Fdocs)
 
 ##### sample response
 
@@ -257,7 +257,7 @@ res = requests.get(url=url, params=payload)
 
 - proto(required): blockchain protocol, current available options: btc, eth
 - address(required): blockchain address
-- apikey(required): [get your free BEI API key today!](https://bei.anchainai.com/pricing)
+- apikey(required): [get your BEI API key today!](https://id.anchainai.com/auth/realms/bei-dashboard/protocol/openid-connect/registrations?kc_locale=&client_id=bei-dashboard&response_type=code&scope=openid%20email&redirect_uri=https%3A%2F%2Fbei.anchainai.com%2Fcallback%3Fref%3Dhttps%253A%252F%252Fbei.anchainai.com%252Fdocs)
 
 ##### sample response
 
